@@ -1,0 +1,26 @@
+{
+  "name": "multiplayermusic",
+  "version": "1.0.0",
+  "description": "Play music with your friends",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corinnavong/SocketProject.git"
+  },
+  "keywords": [
+    "music",
+    "p5js",
+    "css",
+    "html",
+    "javascript"
+  ],
+  "author": " (c)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/corinnavong/SocketProject/issues"
+  },
+  "homepage": "https://github.com/corinnavong/SocketProject#readme"
+}

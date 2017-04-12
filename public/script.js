@@ -1,7 +1,7 @@
 var song;
 
 function setup() {
-  song = loadSound('Lana Del Rey - Young And Beautiful.mp3');
+  song = loadSound('song.mp3');
   createCanvas(720, 200);
   background(255,0,0);
 }
