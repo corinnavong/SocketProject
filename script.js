@@ -1,7 +1,17 @@
+var song;
+
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+  song = loadSound('Lana Del Rey - Young And Beautiful.mp3');
+  createCanvas(720, 200);
+  background(255,0,0);
 }
 
-function draw() {
-
+function mousePressed() {
+  if ( song.isPlaying() ) { // .isPlaying() returns a boolean
+    song.stop();
+    background(255,0,0);
+  } else {
+    song.play();
+    background(0,255,0);
+  }
 }
