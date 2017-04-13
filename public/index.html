@@ -10,7 +10,21 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.min.js"></script>
 <script src="p5.sound.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
 <script src="script.js"></script>
+<script>
+
+var socket = io.connect(window.location.origin);
+socket.on('message', function(data){
+  console.log(data);
+  drawDiv(data.x, data.y);
+})
+
+document.body.addEventListener('click', function(e){
+  socket.emit('message', {x: e.clientX, y: e.clientY});
+  drawDiv(e.clientX, e.clientY);
+})
+</script>
 </body>
 
 </html>
