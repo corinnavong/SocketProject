@@ -12,7 +12,7 @@ var env, triOsc;
 
 function setup() {
   var cnv = createCanvas(800, 400);
-  background(100);
+  background(255);
 
   env = new p5.Env();
   env.setADSR(attackTime, decayTime, susPercent, releaseTime);
@@ -33,5 +33,13 @@ function playEnv(){
 }
 
 function draw() {
-  fill(0);
+  noFill();
+  strokeWeight(1);
+  rect(0,0,width/8, height-1);
+  rect(width/8,0,width/8,height-1);
+  rect(width/4,0,width/8,height-1);
+  rect(3*(width/8),0,width/8,height-1);
+  rect(width/2,0,width/8,height-1);
+  rect(5*(width/8),0,width/8,height-1);
+  rect(3*(width/4),0,width/8,height-1);
 }
