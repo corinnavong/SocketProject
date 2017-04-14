@@ -9,10 +9,10 @@ server.listen(process.env.PORT || 3000);
 
 io.on('connection', function(client){
   console.log('A user connected!');
-  client.emit('initialize', messages);
+  // client.emit('initialize', messages);
   client.on('message', function(data){
     console.log('message recieved', data);
-    messages.push(data);
+    // messages.push(data);
     client.broadcast.emit('message', data);
   })
 });
