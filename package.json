@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Play music with your friends",
   "main": "app.js",
-  "dependencies"
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
