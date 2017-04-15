@@ -10,6 +10,8 @@ var releaseTime = 0.5;
 
 var env, triOsc;
 
+var c;
+
 function setup() {
   var cnv = createCanvas(800, 400);
   background(255);
@@ -24,6 +26,7 @@ function setup() {
   triOsc.freq(notes[1]);
 
   cnv.mousePressed(playEnv);
+
 }
 
 function playEnv(){
@@ -33,13 +36,50 @@ function playEnv(){
 }
 
 function draw() {
-  noFill();
-  strokeWeight(1);
-  rect(0,0,width/8, height-1);
-  rect(width/8,0,width/8,height-1);
-  rect(width/4,0,width/8,height-1);
-  rect(3*(width/8),0,width/8,height-1);
-  rect(width/2,0,width/8,height-1);
-  rect(5*(width/8),0,width/8,height-1);
-  rect(3*(width/4),0,width/8,height-1);
+  fill(180, 214, 237);
+  noStroke();
+
+  c = color(50, 55, 100);
+  fill(252, 171, 185);
+  rect(0, 10, 60, 800);
+
+  c = color(50, 55, 100);
+  fill(234, 121, 140);
+  rect(70, 10, 60, 800);
+
+  c = color(50, 55, 100);
+  fill(226, 49, 79);
+  rect(140, 10, 60, 800);
+
+  c= color(50, 55, 100);
+  fill(232, 161, 120);
+  rect(210, 10, 60, 800);
+
+  c = color(50, 55, 100);
+  fill(242, 232, 137);
+  rect(280, 10, 60, 800);
+
+  c = color(50, 55, 100);
+  fill(135, 219, 129);
+  rect(350, 10, 60, 800);
+
+  c = color(50, 55, 100);
+  fill(120, 187, 232);
+  rect(420, 10, 60, 800);
+
+  c = color(50, 55, 100);
+  fill(120, 163, 232);
+  rect(490, 10, 60, 800);
+
+  c = color(50, 55, 100);
+  fill(109, 127, 219);
+  rect(560, 10, 60, 800);
+
+  c = color(50, 55, 100);
+  fill(87, 83, 193);
+  rect(630, 10, 60, 800);
+
+  c = color(50, 55, 100);
+  fill(55, 52, 153);
+  rect(700, 10, 60, 800);  
 }
