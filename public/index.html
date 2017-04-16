@@ -24,12 +24,10 @@
 var socket = io.connect(window.location.origin);
 socket.on('message', function(data){
   console.log(data);
-  drawDiv(data.x, data.y);
 })
 
 document.body.addEventListener('click', function(e){
   socket.emit('message', {x: e.clientX, y: e.clientY});
-  drawDiv(e.clientX, e.clientY);
 })
 </script>
 </body>
