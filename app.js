@@ -7,14 +7,10 @@ app.use(express.static('public'));
 
 server.listen(process.env.PORT || 3000);
 
-var messages = [];
-
 io.on('connection', function(client){
   console.log('A user connected!');
-  client.emit('initialize', messages);
   client.on('message', function(data){
     console.log('message received', data);
-    messages.push(data);
     client.broadcast.emit('message', data);
   })
 });

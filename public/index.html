@@ -9,7 +9,7 @@
 	<script src="jquery-ui.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
 	<script src="script.js"></script>
-	<script src="/socket.io/socket.io.js"></script>
+	<script src="socket.io.js"></script>
 </head>
 
 <body>
@@ -27,7 +27,7 @@ socket.on('message', function(data){
 })
 
 document.body.addEventListener('click', function(e){
-  socket.emit('message', {x: e.clientX, y: e.clientY});
+  socket.emit('message', data);
 })
 </script>
 </body>
