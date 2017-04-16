@@ -29,6 +29,10 @@ socket.on('message', function(data){
 document.body.addEventListener('click', function(e){
   socket.emit('message', data);
 })
+
+function data() {
+	console.log(data);
+}
 </script>
 </body>
 

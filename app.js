@@ -7,10 +7,9 @@ app.use(express.static('public'));
 
 server.listen(process.env.PORT || 3000);
 
-io.on('connection', function(client){
-  console.log('A user connected!');
-  client.on('message', function(data){
-    console.log('message received', data);
-    client.broadcast.emit('message', data);
-  })
+io.on('connection', function(socket){
+  console.log('a user connected');
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
 });
